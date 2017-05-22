@@ -3,57 +3,73 @@
 <head>
 	<title>Countin' Cash</title>
 
-
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
+	<!-- jQuery always come first -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+	<!-- Latest compiled and minified JavaScript -->
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+	<!-- Include datatables -->
+	<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+	<script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 <body>
 
+<div id="pages">
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-12">
-			<h1>Yahoo Stock Ticker</h1>
-			<form class="yahoo-finance-form form-inline">
-				<label class="sr-only">Stock Symbol</label>
-				<div class="input-group">
-					<input type="text" class="form-comntrol" id="symbol" placeholder="Please enter symbols"/>
-					<button type="submit" class="btn btn-primary">Gimme some good news</button>
-				</div>
-			</form>
+<div id="page1">
+	<div id="arrow1"> >>> </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Yahoo Stock Ticker</h1>
+				<form class="yahoo-finance-form form-inline">
+					<label class="sr-only">Stock Symbol</label>
+					<div class="input-group">
+						<input type="text" class="form-control" id="symbol" placeholder="Please enter symbols" />
+						<button type="submit" class="btn btn-primary">Get me some good news!</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-12">
+				<table id="stock-table" class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Stock Symbol</th>
+							<th>Company Name</th>
+							<th>Ask Price</th>
+							<th>Bid Price</th>
+							<th>Daily Change</th>
+						</tr>
+					</thead>
+
+					<tbody id="stock-ticker-body">
+						<tr>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-		<div class="col-sm-12">
-			<table class="table table-striped table-bordered">
-				<thead>
-					<tr>
-						<th>Stock Symbol</th>
-						<th>Company Name</th>
-						<th>Ask Price</th>
-						<th>Bid Price</th>
-						<th>Daily Change</th>
-					</tr>
-				</thead>
-				<tbody id="stock-ticker-body">
-					<tr>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-						<td>-</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+
 	</div>
-</div> 
-
-
+</div>
+<div id="page2">
+	<div id="arrow2"> <<< </div>
+	<h1>This is my blackjack Game</h1>
+</div>
+</div>
 
 </body>
-</html>	
-
+</html>
